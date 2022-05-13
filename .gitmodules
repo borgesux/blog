@@ -1,0 +1,8 @@
+[submodule "public"]
+	path = public
+	url = https://github.com/borgesux/borgesux.github.io.git
+	branch = main
+[submodule "borgesuxblog/public"]
+	path = borgesuxblog/public
+	url = https://github.com/borgesux/borgesux.github.io.git
+	branch = main
