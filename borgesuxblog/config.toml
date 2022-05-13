@@ -1,0 +1,4 @@
+baseURL = 'http://borgesux.github.io/'
+languageCode = 'pt-br'
+title = 'Borgesux Blog'
+theme = 'loveit'
