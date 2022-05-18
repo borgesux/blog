@@ -13,3 +13,6 @@
 [submodule "borgesuxblog/themes/loveit"]
 	path = borgesuxblog/themes/loveit
 	url = https://github.com/dillonzq/LoveIt.git
+[submodule "themes/loveit"]
+	path = themes/loveit
+	url = https://github.com/dillonzq/LoveIt.git
