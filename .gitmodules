@@ -6,7 +6,7 @@
 	path = borgesuxblog/public
 	url = https://github.com/borgesux/borgesux.github.io.git
 	branch = main
-[submodule "borgesuxblog/themes"]
-	path = borgesuxblog/themes/
+[submodule "borgesuxblog/themes/loveit"]
+	path = borgesuxblog/themes/loveit
 	url = https://github.com/borgesux/blog.git
 	branch = main
