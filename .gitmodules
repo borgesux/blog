@@ -10,3 +10,6 @@
 	path = borgesuxblog/themes/loveit
 	url = https://github.com/borgesux/blog.git
 	branch = main
+[submodule "borgesuxblog/themes/loveit"]
+	path = borgesuxblog/themes/loveit
+	url = https://github.com/dillonzq/LoveIt.git
