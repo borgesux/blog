@@ -10,7 +10,7 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-    
+
     # Step 1 - Checks-out your repository under $GITHUB_WORKSPACE
       - name: Git checkout
         uses: actions/checkout@v2
@@ -30,7 +30,7 @@ jobs:
     
     # Also specifies the theme we want to use
       - name: Build
-        run: hugo --minify
+        run: hugo -t loveit
 
     # # Step 5 - Create name file
     #   - name: Create cname file
