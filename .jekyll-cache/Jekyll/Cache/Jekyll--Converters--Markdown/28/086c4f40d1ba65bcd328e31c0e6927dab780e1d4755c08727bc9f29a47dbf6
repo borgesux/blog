@@ -1,0 +1,390 @@
+I"�t<p>The <code class="language-plaintext highlighter-rouge">echarts</code> shortcode supports data visualization in Hugo with <a href="https://echarts.apache.org/">ECharts</a> library.</p>
+
+<!--more-->
+
+<p><strong>ECharts</strong> is a library helping you to generate interactive data visualization.</p>
+
+<p>The basic chart types ECharts supports include <a href="https://echarts.apache.org/en/option.html#series-line">line series</a>, <a href="https://echarts.apache.org/en/option.html#series-line">bar series</a>, <a href="https://echarts.apache.org/en/option.html#series-scatter">scatter series</a>, <a href="https://echarts.apache.org/en/option.html#series-pie">pie charts</a>, <a href="https://echarts.apache.org/en/option.html#series-candlestick">candle-stick series</a>, <a href="https://echarts.apache.org/en/option.html#series-boxplot">boxplot series</a> for statistics, <a href="https://echarts.apache.org/en/option.html#series-map">map series</a>, <a href="https://echarts.apache.org/en/option.html#series-heatmap">heatmap series</a>, <a href="https://echarts.apache.org/en/option.html#series-lines">lines series</a> for directional information, <a href="https://echarts.apache.org/en/option.html#series-graph">graph series</a> for relationships, <a href="https://echarts.apache.org/en/option.html#series-treemap">treemap series</a>, <a href="https://echarts.apache.org/en/option.html#series-sunburst">sunburst series</a>, <a href="https://echarts.apache.org/en/option.html#series-parallel">parallel series</a> for multi-dimensional data, <a href="https://echarts.apache.org/en/option.html#series-funnel">funnel series</a>, <a href="https://echarts.apache.org/en/option.html#series-gauge">gauge series</a>. And it’s extremely easy to create a combinition of them with ECharts.</p>
+
+<p>Just insert your ECharts option in <code class="language-plaintext highlighter-rouge">JSON</code>/<code class="language-plaintext highlighter-rouge">YAML</code>/<code class="language-plaintext highlighter-rouge">TOML</code> format in the <code class="language-plaintext highlighter-rouge">echarts</code> shortcode and that’s it.</p>
+
+<p>Example <code class="language-plaintext highlighter-rouge">echarts</code> input in <code class="language-plaintext highlighter-rouge">JSON</code> format:</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">
+</span><span class="p">{</span><span class="w">
+  </span><span class="nl">"title"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"text"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Summary Line Chart"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"top"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2%"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"left"</span><span class="p">:</span><span class="w"> </span><span class="s2">"center"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"tooltip"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"trigger"</span><span class="p">:</span><span class="w"> </span><span class="s2">"axis"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"legend"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"Email Marketing"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Affiliate Advertising"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Video Advertising"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Direct View"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Search Engine"</span><span class="p">],</span><span class="w">
+    </span><span class="nl">"top"</span><span class="p">:</span><span class="w"> </span><span class="s2">"10%"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"grid"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"left"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5%"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"right"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5%"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"bottom"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5%"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"top"</span><span class="p">:</span><span class="w"> </span><span class="s2">"20%"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"containLabel"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"toolbox"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"feature"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"saveAsImage"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Save as Image"</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"xAxis"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"category"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"boundaryGap"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"Monday"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Tuesday"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Wednesday"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Thursday"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Friday"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Saturday"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Sunday"</span><span class="p">]</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"yAxis"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"value"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"series"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Email Marketing"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"line"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"stack"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Total"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="mi">120</span><span class="p">,</span><span class="w"> </span><span class="mi">132</span><span class="p">,</span><span class="w"> </span><span class="mi">101</span><span class="p">,</span><span class="w"> </span><span class="mi">134</span><span class="p">,</span><span class="w"> </span><span class="mi">90</span><span class="p">,</span><span class="w"> </span><span class="mi">230</span><span class="p">,</span><span class="w"> </span><span class="mi">210</span><span class="p">]</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Affiliate Advertising"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"line"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"stack"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Total"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="mi">220</span><span class="p">,</span><span class="w"> </span><span class="mi">182</span><span class="p">,</span><span class="w"> </span><span class="mi">191</span><span class="p">,</span><span class="w"> </span><span class="mi">234</span><span class="p">,</span><span class="w"> </span><span class="mi">290</span><span class="p">,</span><span class="w"> </span><span class="mi">330</span><span class="p">,</span><span class="w"> </span><span class="mi">310</span><span class="p">]</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Video Advertising"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"line"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"stack"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Total"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="mi">150</span><span class="p">,</span><span class="w"> </span><span class="mi">232</span><span class="p">,</span><span class="w"> </span><span class="mi">201</span><span class="p">,</span><span class="w"> </span><span class="mi">154</span><span class="p">,</span><span class="w"> </span><span class="mi">190</span><span class="p">,</span><span class="w"> </span><span class="mi">330</span><span class="p">,</span><span class="w"> </span><span class="mi">410</span><span class="p">]</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Direct View"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"line"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"stack"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Total"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="mi">320</span><span class="p">,</span><span class="w"> </span><span class="mi">332</span><span class="p">,</span><span class="w"> </span><span class="mi">301</span><span class="p">,</span><span class="w"> </span><span class="mi">334</span><span class="p">,</span><span class="w"> </span><span class="mi">390</span><span class="p">,</span><span class="w"> </span><span class="mi">330</span><span class="p">,</span><span class="w"> </span><span class="mi">320</span><span class="p">]</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Search Engine"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"line"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"stack"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Total"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="mi">820</span><span class="p">,</span><span class="w"> </span><span class="mi">932</span><span class="p">,</span><span class="w"> </span><span class="mi">901</span><span class="p">,</span><span class="w"> </span><span class="mi">934</span><span class="p">,</span><span class="w"> </span><span class="mi">1290</span><span class="p">,</span><span class="w"> </span><span class="mi">1330</span><span class="p">,</span><span class="w"> </span><span class="mi">1320</span><span class="p">]</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+
+</span></code></pre></div></div>
+
+<p>The same in <code class="language-plaintext highlighter-rouge">YAML</code> format:</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="na">title</span><span class="pi">:</span>
+    <span class="na">text</span><span class="pi">:</span> <span class="s">Summary Line Chart</span>
+    <span class="na">top</span><span class="pi">:</span> <span class="s">2%</span>
+    <span class="na">left</span><span class="pi">:</span> <span class="s">center</span>
+<span class="na">tooltip</span><span class="pi">:</span>
+    <span class="na">trigger</span><span class="pi">:</span> <span class="s">axis</span>
+<span class="na">legend</span><span class="pi">:</span>
+    <span class="na">data</span><span class="pi">:</span>
+        <span class="pi">-</span> <span class="s">Email Marketing</span>
+        <span class="pi">-</span> <span class="s">Affiliate Advertising</span>
+        <span class="pi">-</span> <span class="s">Video Advertising</span>
+        <span class="pi">-</span> <span class="s">Direct View</span>
+        <span class="pi">-</span> <span class="s">Search Engine</span>
+    <span class="na">top</span><span class="pi">:</span> <span class="s">10%</span>
+<span class="na">grid</span><span class="pi">:</span>
+    <span class="na">left</span><span class="pi">:</span> <span class="s">5%</span>
+    <span class="na">right</span><span class="pi">:</span> <span class="s">5%</span>
+    <span class="na">bottom</span><span class="pi">:</span> <span class="s">5%</span>
+    <span class="na">top</span><span class="pi">:</span> <span class="s">20%</span>
+    <span class="na">containLabel</span><span class="pi">:</span> <span class="no">true</span>
+<span class="na">toolbox</span><span class="pi">:</span>
+    <span class="na">feature</span><span class="pi">:</span>
+        <span class="na">saveAsImage</span><span class="pi">:</span>
+            <span class="na">title</span><span class="pi">:</span> <span class="s">Save as Image</span>
+<span class="na">xAxis</span><span class="pi">:</span>
+    <span class="na">type</span><span class="pi">:</span> <span class="s">category</span>
+    <span class="na">boundaryGap</span><span class="pi">:</span> <span class="no">false</span>
+    <span class="na">data</span><span class="pi">:</span>
+        <span class="pi">-</span> <span class="s">Monday</span>
+        <span class="pi">-</span> <span class="s">Tuesday</span>
+        <span class="pi">-</span> <span class="s">Wednesday</span>
+        <span class="pi">-</span> <span class="s">Thursday</span>
+        <span class="pi">-</span> <span class="s">Friday</span>
+        <span class="pi">-</span> <span class="s">Saturday</span>
+        <span class="pi">-</span> <span class="s">Sunday</span>
+<span class="na">yAxis</span><span class="pi">:</span>
+    <span class="na">type</span><span class="pi">:</span> <span class="s">value</span>
+<span class="na">series</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Email Marketing</span>
+      <span class="na">type</span><span class="pi">:</span> <span class="s">line</span>
+      <span class="na">stack</span><span class="pi">:</span> <span class="s">Total</span>
+      <span class="na">data</span><span class="pi">:</span>
+          <span class="pi">-</span> <span class="m">120</span>
+          <span class="pi">-</span> <span class="m">132</span>
+          <span class="pi">-</span> <span class="m">101</span>
+          <span class="pi">-</span> <span class="m">134</span>
+          <span class="pi">-</span> <span class="m">90</span>
+          <span class="pi">-</span> <span class="m">230</span>
+          <span class="pi">-</span> <span class="m">210</span>
+    <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Affiliate Advertising</span>
+      <span class="na">type</span><span class="pi">:</span> <span class="s">line</span>
+      <span class="na">stack</span><span class="pi">:</span> <span class="s">Total</span>
+      <span class="na">data</span><span class="pi">:</span>
+          <span class="pi">-</span> <span class="m">220</span>
+          <span class="pi">-</span> <span class="m">182</span>
+          <span class="pi">-</span> <span class="m">191</span>
+          <span class="pi">-</span> <span class="m">234</span>
+          <span class="pi">-</span> <span class="m">290</span>
+          <span class="pi">-</span> <span class="m">330</span>
+          <span class="pi">-</span> <span class="m">310</span>
+    <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Video Advertising</span>
+      <span class="na">type</span><span class="pi">:</span> <span class="s">line</span>
+      <span class="na">stack</span><span class="pi">:</span> <span class="s">Total</span>
+      <span class="na">data</span><span class="pi">:</span>
+          <span class="pi">-</span> <span class="m">150</span>
+          <span class="pi">-</span> <span class="m">232</span>
+          <span class="pi">-</span> <span class="m">201</span>
+          <span class="pi">-</span> <span class="m">154</span>
+          <span class="pi">-</span> <span class="m">190</span>
+          <span class="pi">-</span> <span class="m">330</span>
+          <span class="pi">-</span> <span class="m">410</span>
+    <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Direct View</span>
+      <span class="na">type</span><span class="pi">:</span> <span class="s">line</span>
+      <span class="na">stack</span><span class="pi">:</span> <span class="s">Total</span>
+      <span class="na">data</span><span class="pi">:</span>
+          <span class="pi">-</span> <span class="m">320</span>
+          <span class="pi">-</span> <span class="m">332</span>
+          <span class="pi">-</span> <span class="m">301</span>
+          <span class="pi">-</span> <span class="m">334</span>
+          <span class="pi">-</span> <span class="m">390</span>
+          <span class="pi">-</span> <span class="m">330</span>
+          <span class="pi">-</span> <span class="m">320</span>
+    <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Search Engine</span>
+      <span class="na">type</span><span class="pi">:</span> <span class="s">line</span>
+      <span class="na">stack</span><span class="pi">:</span> <span class="s">Total</span>
+      <span class="na">data</span><span class="pi">:</span>
+          <span class="pi">-</span> <span class="m">820</span>
+          <span class="pi">-</span> <span class="m">932</span>
+          <span class="pi">-</span> <span class="m">901</span>
+          <span class="pi">-</span> <span class="m">934</span>
+          <span class="pi">-</span> <span class="m">1290</span>
+          <span class="pi">-</span> <span class="m">1330</span>
+          <span class="pi">-</span> <span class="m">1320</span>
+
+</code></pre></div></div>
+
+<p>The same in <code class="language-plaintext highlighter-rouge">TOML</code> format:</p>
+
+<div class="language-toml highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="nn">[title]</span>
+<span class="py">text</span> <span class="p">=</span> <span class="s">"Summary Line Chart"</span>
+<span class="py">top</span> <span class="p">=</span> <span class="s">"2%"</span>
+<span class="py">left</span> <span class="p">=</span> <span class="s">"center"</span>
+
+<span class="nn">[tooltip]</span>
+<span class="py">trigger</span> <span class="p">=</span> <span class="s">"axis"</span>
+
+<span class="nn">[legend]</span>
+<span class="py">data</span> <span class="p">=</span> <span class="p">[</span>
+  <span class="s">"Email Marketing"</span><span class="p">,</span>
+  <span class="s">"Affiliate Advertising"</span><span class="p">,</span>
+  <span class="s">"Video Advertising"</span><span class="p">,</span>
+  <span class="s">"Direct View"</span><span class="p">,</span>
+  <span class="s">"Search Engine"</span>
+<span class="p">]</span>
+<span class="py">top</span> <span class="p">=</span> <span class="s">"10%"</span>
+
+<span class="nn">[grid]</span>
+<span class="py">left</span> <span class="p">=</span> <span class="s">"5%"</span>
+<span class="py">right</span> <span class="p">=</span> <span class="s">"5%"</span>
+<span class="py">bottom</span> <span class="p">=</span> <span class="s">"5%"</span>
+<span class="py">top</span> <span class="p">=</span> <span class="s">"20%"</span>
+<span class="py">containLabel</span> <span class="p">=</span> <span class="kc">true</span>
+
+<span class="nn">[toolbox]</span>
+<span class="nn">[toolbox.feature]</span>
+<span class="nn">[toolbox.feature.saveAsImage]</span>
+<span class="py">title</span> <span class="p">=</span> <span class="s">"Save as Image"</span>
+
+<span class="nn">[xAxis]</span>
+<span class="py">type</span> <span class="p">=</span> <span class="s">"category"</span>
+<span class="py">boundaryGap</span> <span class="p">=</span> <span class="kc">false</span>
+<span class="py">data</span> <span class="p">=</span> <span class="p">[</span>
+  <span class="s">"Monday"</span><span class="p">,</span>
+  <span class="s">"Tuesday"</span><span class="p">,</span>
+  <span class="s">"Wednesday"</span><span class="p">,</span>
+  <span class="s">"Thursday"</span><span class="p">,</span>
+  <span class="s">"Friday"</span><span class="p">,</span>
+  <span class="s">"Saturday"</span><span class="p">,</span>
+  <span class="s">"Sunday"</span>
+<span class="p">]</span>
+
+<span class="nn">[yAxis]</span>
+<span class="py">type</span> <span class="p">=</span> <span class="s">"value"</span>
+
+<span class="nn">[[series]]</span>
+<span class="py">name</span> <span class="p">=</span> <span class="s">"Email Marketing"</span>
+<span class="py">type</span> <span class="p">=</span> <span class="s">"line"</span>
+<span class="py">stack</span> <span class="p">=</span> <span class="s">"Total"</span>
+<span class="py">data</span> <span class="p">=</span> <span class="p">[</span>
+  <span class="mf">120.0</span><span class="p">,</span>
+  <span class="mf">132.0</span><span class="p">,</span>
+  <span class="mf">101.0</span><span class="p">,</span>
+  <span class="mf">134.0</span><span class="p">,</span>
+  <span class="mf">90.0</span><span class="p">,</span>
+  <span class="mf">230.0</span><span class="p">,</span>
+  <span class="mf">210.0</span>
+<span class="p">]</span>
+
+<span class="nn">[[series]]</span>
+<span class="py">name</span> <span class="p">=</span> <span class="s">"Affiliate Advertising"</span>
+<span class="py">type</span> <span class="p">=</span> <span class="s">"line"</span>
+<span class="py">stack</span> <span class="p">=</span> <span class="s">"Total"</span>
+<span class="py">data</span> <span class="p">=</span> <span class="p">[</span>
+  <span class="mf">220.0</span><span class="p">,</span>
+  <span class="mf">182.0</span><span class="p">,</span>
+  <span class="mf">191.0</span><span class="p">,</span>
+  <span class="mf">234.0</span><span class="p">,</span>
+  <span class="mf">290.0</span><span class="p">,</span>
+  <span class="mf">330.0</span><span class="p">,</span>
+  <span class="mf">310.0</span>
+<span class="p">]</span>
+
+<span class="nn">[[series]]</span>
+<span class="py">name</span> <span class="p">=</span> <span class="s">"Video Advertising"</span>
+<span class="py">type</span> <span class="p">=</span> <span class="s">"line"</span>
+<span class="py">stack</span> <span class="p">=</span> <span class="s">"Total"</span>
+<span class="py">data</span> <span class="p">=</span> <span class="p">[</span>
+  <span class="mf">150.0</span><span class="p">,</span>
+  <span class="mf">232.0</span><span class="p">,</span>
+  <span class="mf">201.0</span><span class="p">,</span>
+  <span class="mf">154.0</span><span class="p">,</span>
+  <span class="mf">190.0</span><span class="p">,</span>
+  <span class="mf">330.0</span><span class="p">,</span>
+  <span class="mf">410.0</span>
+<span class="p">]</span>
+
+<span class="nn">[[series]]</span>
+<span class="py">name</span> <span class="p">=</span> <span class="s">"Direct View"</span>
+<span class="py">type</span> <span class="p">=</span> <span class="s">"line"</span>
+<span class="py">stack</span> <span class="p">=</span> <span class="s">"Total"</span>
+<span class="py">data</span> <span class="p">=</span> <span class="p">[</span>
+  <span class="mf">320.0</span><span class="p">,</span>
+  <span class="mf">332.0</span><span class="p">,</span>
+  <span class="mf">301.0</span><span class="p">,</span>
+  <span class="mf">334.0</span><span class="p">,</span>
+  <span class="mf">390.0</span><span class="p">,</span>
+  <span class="mf">330.0</span><span class="p">,</span>
+  <span class="mf">320.0</span>
+<span class="p">]</span>
+
+<span class="nn">[[series]]</span>
+<span class="py">name</span> <span class="p">=</span> <span class="s">"Search Engine"</span>
+<span class="py">type</span> <span class="p">=</span> <span class="s">"line"</span>
+<span class="py">stack</span> <span class="p">=</span> <span class="s">"Total"</span>
+<span class="py">data</span> <span class="p">=</span> <span class="p">[</span>
+  <span class="mf">820.0</span><span class="p">,</span>
+  <span class="mf">932.0</span><span class="p">,</span>
+  <span class="mf">901.0</span><span class="p">,</span>
+  <span class="mf">934.0</span><span class="p">,</span>
+  <span class="mf">1290.0</span><span class="p">,</span>
+  <span class="mf">1330.0</span><span class="p">,</span>
+  <span class="mf">1320.0</span>
+<span class="p">]</span>
+
+</code></pre></div></div>
+
+<p>The rendered output looks like this:</p>
+
+<p>{
+  “title”: {
+    “text”: “Summary Line Chart”,
+    “top”: “2%”,
+    “left”: “center”
+  },
+  “tooltip”: {
+    “trigger”: “axis”
+  },
+  “legend”: {
+    “data”: [“Email Marketing”, “Affiliate Advertising”, “Video Advertising”, “Direct View”, “Search Engine”],
+    “top”: “10%”
+  },
+  “grid”: {
+    “left”: “5%”,
+    “right”: “5%”,
+    “bottom”: “5%”,
+    “top”: “20%”,
+    “containLabel”: true
+  },
+  “toolbox”: {
+    “feature”: {
+      “saveAsImage”: {
+        “title”: “Save as Image”
+      }
+    }
+  },
+  “xAxis”: {
+    “type”: “category”,
+    “boundaryGap”: false,
+    “data”: [“Monday”, “Tuesday”, “Wednesday”, “Thursday”, “Friday”, “Saturday”, “Sunday”]
+  },
+  “yAxis”: {
+    “type”: “value”
+  },
+  “series”: [
+    {
+      “name”: “Email Marketing”,
+      “type”: “line”,
+      “stack”: “Total”,
+      “data”: [120, 132, 101, 134, 90, 230, 210]
+    },
+    {
+      “name”: “Affiliate Advertising”,
+      “type”: “line”,
+      “stack”: “Total”,
+      “data”: [220, 182, 191, 234, 290, 330, 310]
+    },
+    {
+      “name”: “Video Advertising”,
+      “type”: “line”,
+      “stack”: “Total”,
+      “data”: [150, 232, 201, 154, 190, 330, 410]
+    },
+    {
+      “name”: “Direct View”,
+      “type”: “line”,
+      “stack”: “Total”,
+      “data”: [320, 332, 301, 334, 390, 330, 320]
+    },
+    {
+      “name”: “Search Engine”,
+      “type”: “line”,
+      “stack”: “Total”,
+      “data”: [820, 932, 901, 934, 1290, 1330, 1320]
+    }
+  ]
+}</p>
+
+<p>The <code class="language-plaintext highlighter-rouge">echarts</code> shortcode has also the following named parameters:</p>
+
+<ul>
+  <li>
+    <p><strong>width</strong> <em>[optional]</em> (<strong>first</strong> positional parameter)</p>
+
+    <p>Width of the data visualization, default value is <code class="language-plaintext highlighter-rouge">100%</code>.</p>
+  </li>
+  <li>
+    <p><strong>height</strong> <em>[optional]</em> (<strong>second</strong> positional parameter)</p>
+
+    <p>Height of the data visualization, default value is <code class="language-plaintext highlighter-rouge">30rem</code>.</p>
+  </li>
+</ul>
+:ET
