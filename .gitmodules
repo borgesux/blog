@@ -13,6 +13,6 @@
 # [submodule "borgesuxblog/themes/loveit"]
 # 	path = borgesuxblog/themes/loveit
 # 	url = https://github.com/borgesux/blog.git
-# [submodule "themes/loveit"]
-# 	path = themes/loveit
-# 	url = https://github.com/borgesux/blog.git
+[submodule "themes/loveit"]
+	path = themes/loveit
+	url = https://github.com/borgesux/blog.git
