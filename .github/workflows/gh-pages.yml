@@ -29,7 +29,7 @@ jobs:
     
     # Also specifies the theme we want to use
       - name: Build
-        run: hugo --theme=fresh
+        run: hugo --theme=loveit
 
       # - name: Build
       #   run: hugo --minify
