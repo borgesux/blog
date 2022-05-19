@@ -43,5 +43,7 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         if: github.ref == 'refs/heads/main'
         with:
+          external_repository: borgesux/borgesux.github.io
+          publish_branch: main
           github_token: ${{ secrets.token_github }}
           publish_dir: ./public
