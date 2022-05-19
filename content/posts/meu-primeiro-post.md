@@ -1,7 +1,7 @@
 ---
-title: "Meu Primeiro Post"
+title: "Meu-Primeiro-Post"
 date: 2022-05-13T09:30:06-04:00
-draft: true
+draft: false
 author: Jonathas Borges
 ---
 
@@ -10,4 +10,5 @@ author: Jonathas Borges
 ### Título 3
 
 =)
-updated 
+updated
+updated oii
