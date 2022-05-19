@@ -1,18 +1,18 @@
-[submodule "public"]
-	path = public
-	url = https://github.com/borgesux/borgesux.github.io.git
-	branch = main
-[submodule "borgesuxblog/public"]
-	path = borgesuxblog/public
-	url = https://github.com/borgesux/borgesux.github.io.git
-	branch = main
-[submodule "borgesuxblog/themes/"]
-	path = borgesuxblog/themes/loveit
-	url = https://github.com/borgesux/blog.git
-	branch = main
-[submodule "borgesuxblog/themes/loveit"]
-	path = borgesuxblog/themes/loveit
-	url = https://github.com/borgesux/blog.git
-[submodule "themes/loveit"]
-	path = themes/loveit
-	url = https://github.com/borgesux/blog.git
+# [submodule "public"]
+# 	path = public
+# 	url = https://github.com/borgesux/borgesux.github.io.git
+# 	branch = main
+# [submodule "borgesuxblog/public"]
+# 	path = borgesuxblog/public
+# 	url = https://github.com/borgesux/borgesux.github.io.git
+# 	branch = main
+# [submodule "borgesuxblog/themes/"]
+# 	path = borgesuxblog/themes/loveit
+# 	url = https://github.com/borgesux/blog.git
+# 	branch = main
+# [submodule "borgesuxblog/themes/loveit"]
+# 	path = borgesuxblog/themes/loveit
+# 	url = https://github.com/borgesux/blog.git
+# [submodule "themes/loveit"]
+# 	path = themes/loveit
+# 	url = https://github.com/borgesux/blog.git
