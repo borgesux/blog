@@ -2,6 +2,7 @@
 title: "Meu Primeiro Post"
 date: 2022-05-13T09:30:06-04:00
 draft: true
+author: Jonathas Borges
 ---
 
 # Título 1
@@ -9,3 +10,4 @@ draft: true
 ### Título 3
 
 =)
+updated 
